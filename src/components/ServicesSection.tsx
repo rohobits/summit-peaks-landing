@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import { Mountain, Compass, Database } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,19 +10,22 @@ const services = [
     icon: <Mountain className="h-10 w-10 text-summit-forest" />,
     title: "Custom Website Design",
     description: "Stand out with a unique website that reflects your brand's connection to the outdoors and drives conversions.",
-    feature: "SEO-optimized for outdoor enthusiasts"
+    feature: "SEO-optimized for outdoor enthusiasts",
+    link: "/website-design"
   },
   {
     icon: <Database className="h-10 w-10 text-summit-forest" />,
     title: "Inventory Management",
     description: "Simplify your digital presence with one inventory stream that works across all platforms including Locally integration.",
-    feature: "Save thousands compared to WorkStand"
+    feature: "Save thousands compared to WorkStand",
+    link: "#"
   },
   {
     icon: <Compass className="h-10 w-10 text-summit-forest" />,
     title: "E-commerce Solutions",
     description: "Sell your outdoor gear and services with a seamless shopping experience that converts visitors into customers.",
-    feature: "Integrated inventory management"
+    feature: "Integrated inventory management",
+    link: "#"
   }
 ];
 
@@ -50,8 +54,8 @@ const ServicesSection = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-summit-forest text-summit-forest hover:bg-summit-forest hover:text-white">
-                  Learn More
+                <Button variant="outline" className="w-full border-summit-forest text-summit-forest hover:bg-summit-forest hover:text-white" asChild>
+                  <Link to={service.link}>Learn More</Link>
                 </Button>
               </CardFooter>
             </Card>
