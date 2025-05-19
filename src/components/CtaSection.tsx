@@ -13,16 +13,18 @@ const CtaSection = () => {
           </div>
           
           <div className="py-16 px-8 md:p-16 max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to elevate your outdoor business online?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Stop overpaying for inventory management
+            </h2>
             <p className="text-white/80 text-lg mb-8 max-w-lg">
-              Join our growing network of outdoor industry clients who are seeing real results from their custom-designed websites.
+              It shouldn't cost you to share your own inventory. Join our growing network of outdoor businesses saving thousands with our affordable Locally integration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-white text-summit-forest hover:bg-white/90 py-6 px-8 text-lg flex items-center gap-2">
                 Get Your Free Consultation <ArrowRight size={18} />
               </Button>
               <Button variant="outline" className="border-white text-white hover:bg-white/10 py-6 px-8 text-lg">
-                View Pricing
+                Compare Pricing
               </Button>
             </div>
           </div>

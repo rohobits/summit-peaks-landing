@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Mountain, Compass, TreePine } from "lucide-react";
+import { Mountain, Compass, Database } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -12,16 +12,16 @@ const services = [
     feature: "SEO-optimized for outdoor enthusiasts"
   },
   {
+    icon: <Database className="h-10 w-10 text-summit-forest" />,
+    title: "Inventory Management",
+    description: "Simplify your digital presence with one inventory stream that works across all platforms including Locally integration.",
+    feature: "Save thousands compared to WorkStand"
+  },
+  {
     icon: <Compass className="h-10 w-10 text-summit-forest" />,
     title: "E-commerce Solutions",
     description: "Sell your outdoor gear and services with a seamless shopping experience that converts visitors into customers.",
     feature: "Integrated inventory management"
-  },
-  {
-    icon: <TreePine className="h-10 w-10 text-summit-forest" />,
-    title: "Content Strategy",
-    description: "Engage your audience with compelling content that showcases your outdoor expertise and builds community.",
-    feature: "Trail maps & interactive experiences"
   }
 ];
 
@@ -32,7 +32,7 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Services</h2>
           <p className="text-summit-dark max-w-2xl mx-auto text-lg">
-            We help outdoor businesses thrive online with specialized web solutions designed for your unique needs.
+            We help outdoor businesses thrive online with specialized web solutions and affordable inventory management.
           </p>
         </div>
         
