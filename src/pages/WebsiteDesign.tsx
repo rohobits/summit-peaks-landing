@@ -235,107 +235,10 @@ const WebsiteDesign = () => {
         </div>
       </section>
 
-      {/* Pricing/Packages */}
-      <section className="py-20 bg-summit-light/30">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
-              Website Design Packages
-            </h2>
-            <p className="text-summit-dark max-w-2xl mx-auto text-lg">
-              Affordable options designed specifically for outdoor businesses
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Essential",
-                price: "$1,299",
-                description: "Perfect for small outdoor retailers just getting started online",
-                features: [
-                  "Custom responsive design",
-                  "Up to 5 core pages",
-                  "Basic SEO optimization",
-                  "Contact form integration",
-                  "Mobile-friendly design"
-                ],
-                highlighted: false
-              },
-              {
-                name: "Adventure",
-                price: "$2,499",
-                description: "Our most popular option for established outdoor businesses",
-                features: [
-                  "Premium custom design",
-                  "Up to 10 pages",
-                  "Inventory integration",
-                  "Advanced SEO package",
-                  "Social media integration",
-                  "Google Analytics setup",
-                  "2 rounds of revisions"
-                ],
-                highlighted: true
-              },
-              {
-                name: "Summit",
-                price: "$4,999",
-                description: "Comprehensive solution for larger outdoor retailers",
-                features: [
-                  "Premium custom design",
-                  "Unlimited pages",
-                  "Full inventory integration",
-                  "E-commerce functionality",
-                  "Advanced SEO package",
-                  "Email marketing setup",
-                  "Social media integration",
-                  "3 months of support"
-                ],
-                highlighted: false
-              }
-            ].map((pkg, index) => (
-              <div 
-                key={index}
-                className={`rounded-xl overflow-hidden ${pkg.highlighted ? 'border-2 border-summit-forest scale-105 shadow-xl' : 'border border-summit-light'}`}
-              >
-                <div className={`p-8 ${pkg.highlighted ? 'bg-summit-forest text-white' : 'bg-white'}`}>
-                  <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                  <div className="text-3xl font-bold mb-2">{pkg.price}</div>
-                  <p className={pkg.highlighted ? "text-white/80" : "text-summit-dark"}>
-                    {pkg.description}
-                  </p>
-                </div>
-                <div className="bg-white p-8">
-                  <ul className="space-y-3">
-                    {pkg.features.map((feature, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-2 text-summit-forest shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-8">
-                    <Button 
-                      className={`w-full ${pkg.highlighted ? 'bg-summit-forest hover:bg-summit-forest/90' : 'bg-white border border-summit-forest text-summit-forest hover:bg-summit-forest hover:text-white'}`}
-                    >
-                      Choose Plan
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <p className="text-summit-dark">
-              Need a custom solution? <a href="#" className="text-summit-forest font-semibold underline">Contact us</a> for personalized pricing.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
 };
 
 export default WebsiteDesign;
+
