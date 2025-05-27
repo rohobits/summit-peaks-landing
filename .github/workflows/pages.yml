@@ -1,9 +1,11 @@
+# .github/workflows/pages.yml
 name: 📦 Build & Deploy Vite App to GitHub Pages
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,14 +15,15 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies & build
+      - name: Install & Build
         run: |
           npm ci
           npm run build
