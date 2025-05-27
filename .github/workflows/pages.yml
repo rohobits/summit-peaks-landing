@@ -30,7 +30,7 @@ jobs:
           npm ci
           npm run build
 
-      - name: 🚨 Debug: List dist contents
+      - name: Debug: List dist contents
         run: |
           ls -R dist
 
