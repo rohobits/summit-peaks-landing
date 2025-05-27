@@ -1,5 +1,5 @@
 # .github/workflows/pages.yml
-name: 📦 Build & Deploy Vite App to GitHub Pages
+name: "Build and Deploy Vite App to GitHub Pages"
 
 on:
   push:
@@ -23,11 +23,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
 
-      - name: Install & Build
+      - name: Install dependencies
         run: |
           npm ci
+
+      - name: Build production
+        run: |
           npm run build
 
       - name: Debug: List dist contents
