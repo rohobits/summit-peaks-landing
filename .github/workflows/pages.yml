@@ -15,10 +15,14 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v4
-        with: { node-version: 18 }
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
       - name: Install & Build
         run: |
@@ -31,9 +35,8 @@ jobs:
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
-        with: { path: dist }
+        with:
+          path: dist
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        # bump to v4 for the latest deploy action
         uses: actions/deploy-pages@v4
